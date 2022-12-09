@@ -22,6 +22,10 @@ jobs:
         run : /
           git config --global user.email <alexanderv@iebo.edu.co>
           git config --global user.name <Kirt48>
+      - name: install express
+        run : npm install express
+      - name: run server
+        run : npm start
       - name: deploy the app
         run: npm run deploy
         env: 
