@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Crear Abono Admin</title>
+
+    <!-- Custom fonts for this template -->
+    <link href="../../../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+
+</head>
+
+<body id="page-top">
+
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        {{> sidebar}}
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column vh-100">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                {{> topbar}}
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- crate payment form -->
+                    <div class="card shadow border-left-dark mb-4 ml-3">
+                        <div class="card-header py-3">
+                            <h4 class="m-0 font-weight-bold text-dark"><span>Agregar Abono</span></h4>
+                        </div>
+                        <form id="form" novalidate>
+                            <div class=" card-body d-flex justify-content-center">
+                                <div class="w-75 p-2">
+                                    <div class="row mb-2">
+                                        <div class="col-5">
+                                            <div class="form-group m-0">
+                                                <label for="payment_amount" class="form-label">Monto</label>
+                                                <div class="input-group">
+                                                    <input type="text" id="payment_amount" class="form-control"
+                                                        placeholder="Ingrese el monto a abonar" required>
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text rounded-right"><i
+                                                                class="fas fa-dollar-sign"></i></span>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Por favor ingrese unicamente números.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-7">
+                                            <div class="form-group">
+                                                <label for="payment_img">Comprobante de pago</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text rounded-left"><i
+                                                                class="fas fa-file-archive"></i></span>
+                                                    </div>
+                                                    <div id="payment_img_2" class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="payment_img"
+                                                            required>
+                                                        <label class="custom-file-label" for="payment_img">Suba la
+                                                            imagen del comprobante acá</label>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Este campo no puede enviarse vacio.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="form-group">
+                                                <label class="form-label">Costo total del Pedido</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="$1'350.000"
+                                                        disabled>
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text rounded-right"><i
+                                                                class="fas fa-dollar-sign"></i></span>
+                                                    </div>
+                                                    <div class="form-text d-flex justify-content-start m-0">
+                                                        <span class="font-italic" style="font-size: 15px;">El primer
+                                                            abono debe ser del 20% ($270.000) o superior.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-7">
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <div class="form-group m-0">
+                                                        <label class="form-label">Restante</label>
+                                                        <input type="text" class="form-control" placeholder="1350000"
+                                                            disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 d-flex justify-content-center align-items-end">
+                                                    <div class="col-12 px-1">
+                                                        <button type="button"
+                                                            class="btn btn-outline-secondary shadow-sm font-weight-bolder col-12"
+                                                            data-toggle="modal"
+                                                            data-target="#bank_information">Información
+                                                            bancaria<i class="fas fa-eye ml-2"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-end">
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" id="backButton" class="btn btn-danger">Regresar</button>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" id="saveButton" class="btn btn-success">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            {{> footer}}
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    {{> logoutModal}}
+
+    <!-- BANK INFORMATION MODAL -->
+    <div class="modal fade" id="bank_information" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header card-header">
+                    <h4 class="modal-title" id="staticBackdropLabel">
+                        Información Bancaria - Bancolombia</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="px-3">
+                        <div class="row mb-2">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="form-label">Titular</label>
+                                    <div class="input-group shadow">
+                                        <input type="text" class="form-control border-left-dark"
+                                            placeholder="Esteban Muñoz" disabled>
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text rounded-right"><i
+                                                    class="fas fa-user"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="form-label">Documento del titular</label>
+                                    <div class="input-group shadow">
+                                        <input type="text" class="form-control border-left-dark"
+                                            placeholder="1023626332" disabled>
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text rounded-right"><i
+                                                    class="fas fa-id-card"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="form-label">Entidad Bancaria</label>
+                                    <div class="input-group shadow">
+                                        <input type="text" class="form-control border-left-dark"
+                                            placeholder="Bancolombia" disabled>
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text rounded-right"><i
+                                                    class="fas fa-donate"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="form-label">Número de cuenta</label>
+                                    <div class="input-group shadow">
+                                        <input type="text" class="form-control border-left-dark"
+                                            placeholder="366-3384-0312" disabled>
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text rounded-right"><i
+                                                    class="fas fa-credit-card"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tipo de producto</label>
+                            <div class="input-group shadow">
+                                <input type="text" class="form-control border-left-dark"
+                                    placeholder="Ahorros / Bancolombia a la mano" disabled>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text rounded-right"><i
+                                            class="fas fa-piggy-bank"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer card-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+                        data-target="#qr_code">Código
+                        QR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF BANK INFORMATION MODAL -->
+
+    <!-- QR CODE MODAL -->
+    <div class="modal fade" id="qr_code" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header card-header">
+                    <h4 class="modal-title" id="staticBackdropLabel">
+                        Código QR - Bancolombia</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img class="p-2 rounded shadow mb-3"
+                        src="https://www.ocu.org/-/media/ta/images/qr-code.png?rev=2e1cc496-40d9-4e21-a7fb-9e2c76d6a288&hash=AF7C881FCFD0CBDA00B860726B5E340B&mw=960"
+                        width="270px" alt="">
+                    <h5 class="mb-0">Escanea nuestro código QR usando la app de Bancolombia.</h5>
+                </div>
+                <div class="modal-footer card-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+                        data-target="#bank_information">Información bancaria</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END QR CODE MODAL -->
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../../../../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../../../../js/sb-admin-2.min.js"></script>
+
+    <!--SweetAlert JavaScript-->
+    <script src="../../../../js/sweetalert2.all.min.js"></script>
+
+    <script src="../../../../js/orders/payments/create.js"></script>
+
+</body>
+
+
+</html>

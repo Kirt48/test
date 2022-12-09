@@ -1,0 +1,26 @@
+{
+  "name": "turistik",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fullcalendar/core": "^5.11.3",
+    "@fullcalendar/daygrid": "^5.11.3",
+    "@fullcalendar/list": "^5.11.3",
+    "@fullcalendar/timegrid": "^5.11.3",
+    "chart.js": "^4.0.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "fullcalendar": "^5.11.3",
+    "hbs": "^4.2.0",
+    "nodemon": "^2.0.20",
+    "sweetalert2": "^11.6.15"
+  }
+}

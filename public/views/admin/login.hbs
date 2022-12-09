@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Login</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body style="background-color: #EAEDED;">
+
+    <div id="carouselExampleControls" class="carousel slide" data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container w-75">
+
+                    <!-- Outer Row -->
+                    <div class="d-flex justify-content-center align-items-center vh-100">
+                        <div class=" card o-hidden border-0 shadow-lg my-5 w-50">
+                            <div class="d-flex justify-content-center align-items-center mt-3">
+                                <button class="control-prev btn btn-outline-primary border-0" type="button"
+                                    data-target="#carouselExampleControls" data-slide-to="0">
+                                    Inicio de sesión
+                                </button>
+                                <button class="control-next btn btn-outline-primary border-0" type="button"
+                                    data-target="#carouselExampleControls" data-slide-to="1">
+                                    Registro
+                                </button>
+                            </div>
+                            <div class="card-body p-0">
+                                <!-- Nested Row within Card Body -->
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="p-4">
+                                            <div class="d-flex justify-content-center align-items-center mb-3">
+                                                <div class="row">
+                                                    <div class="">
+                                                        <a href="index.html" class="btn btn-google rounded-circle ">
+                                                            <i class="fab fa-google fa-fw"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="index.html" class="btn btn-facebook rounded-circle ">
+                                                            <i class="fab fa-facebook-f fa-fw"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Login form-->
+                                            <form id="formLogin" class="user needs-validation">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" id="emailLogin"
+                                                        name="emailLogin" aria-describedby="emailHelp"
+                                                        placeholder="Digite su correo">
+                                                    <div class="invalid-feedback">
+                                                        El correo no es valido.
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="password" id="passwordLogin" name="passwordLogin"
+                                                            class="form-control"
+                                                            placeholder="Digite su contraseña">
+                                                        <div class="invalid-feedback">
+                                                            La contraseña no es valida.
+                                                        </div>
+                                                        <div class="input-group-prepend">
+                                                            <button id="SowPasswordLogin"
+                                                                class="btn btn-secondary rounded-right" type="submit"
+                                                                onclick="ShowPasswordLogin()"> <span
+                                                                    class="fa fa-eye-slash icon3 "></span> </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <a href="/dashboard" type="submit" id="saveButtonLogin" class="btn btn-primary btn-block">
+                                                        Ingresar
+                                                    </a>
+                                                </div>
+                                            </form>
+                                            <div class="text-center">
+                                                <a class="small" href="" data-toggle="modal"
+                                                    data-target="#staticBackdrop">¿Olvidate tú contraseña?</a>
+                                                <div class="modal fade" id="staticBackdrop" data-backdrop="static"
+                                                    data-keyboard="false" tabindex="-1"
+                                                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">
+                                                                    Recuperar contraseña</h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <i class="far fa-user-circle text-center mb-2"
+                                                                    style="font-size:48px;color:rgb(0, 0, 0);"></i>
+                                                                <div class="input-group mb-3">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"
+                                                                            id="basic-addon1">@</span>
+                                                                    </div>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Correo" aria-label="Username"
+                                                                        aria-describedby="basic-addon1">
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger"
+                                                                    data-dismiss="modal">Cancelar</button>
+                                                                <a href="forgotPassword"
+                                                                    class="btn btn-primary">Buscar</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container w-75">
+                    <!-- Outer Row -->
+                    <div class="d-flex justify-content-center align-items-center vh-100">
+                        <div class=" card o-hidden border-0 shadow-lg my-5 w-50">
+                            <div class="d-flex justify-content-center align-items-center mt-3">
+                                <button class="control-prev btn btn-outline-primary border-0" type="button"
+                                    data-target="#carouselExampleControls" data-slide-to="0">
+                                    Inicio de sesión
+                                </button>
+                                <button class="control-next btn btn-outline-primary border-0" type="button"
+                                    data-target="#carouselExampleControls" data-slide-to="1">
+                                    Registro
+                                </button>
+                            </div>
+                            <div class="card-body p-0">
+                                <!-- Nested Row within Card Body -->
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="p-4">
+                                            <div class="d-flex justify-content-center align-items-center mb-3">
+                                                <div class="row">
+                                                    <div class="">
+                                                        <a href="index.html" class="btn btn-google rounded-circle ">
+                                                            <i class="fab fa-google fa-fw"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="index.html" class="btn btn-facebook rounded-circle ">
+                                                            <i class="fab fa-facebook-f fa-fw"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Register form-->
+                                            <form id="form" class="user">
+                                                <div class="row">
+                                                    <div class="col-6 form-group">
+                                                        <input type="text" class="form-control" id="name" name="name"
+                                                            aria-describedby="emailHelp" placeholder="Nombre">
+                                                        <div class="invalid-feedback">
+                                                            Este campo no permite números ni caracteres especiales.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 form-group">
+                                                        <input type="text" class="form-control" id="lastName"
+                                                            name="lastName" aria-describedby="emailHelp"
+                                                            placeholder="Apellido">
+                                                        <div class="invalid-feedback">
+                                                            Este campo no permite números ni caracteres especiales.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 form-group">
+                                                        <input type="number" class="form-control" id="document"
+                                                            name="document" placeholder="Documento">
+                                                        <div class="invalid-feedback">
+                                                            Este campo no permite letras ni caracteres especiales.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 form-group">
+                                                        <input type="number" class="form-control" id="phone"
+                                                            name="phone" placeholder="Número de teléfono">
+                                                        <div class="invalid-feedback">
+                                                            Este campo no permite números ni caracteres especiales.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 form-group">
+                                                        <input type="text" class="form-control" id="eps" name="eps"
+                                                            placeholder="EPS">
+                                                        <div class="invalid-feedback">
+                                                            Este campo no permite números ni caracteres especiales.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 form-group">
+                                                        <input type="text" class="form-control" id="address"
+                                                            name="address" placeholder="Dirección">
+                                                        <div class="invalid-feedback">
+                                                            La dirección no es valida.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 form-group">
+                                                        <input type="date" class="form-control" id="dateBirth"
+                                                            name="dateBirth" placeholder="Fecha de nacimiento">
+                                                        <div class="invalid-feedback">
+                                                            La Fecha no es valida.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 form-group">
+                                                        <input type="email" class="form-control " id="email"
+                                                            name="email" placeholder="Correo">
+                                                        <div class="invalid-feedback">
+                                                            El correo no es valido.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 form-group">
+                                                        <div class="input-group">
+                                                            <input type="password" class="form-control" id="password"
+                                                                name="password" placeholder="Contraseña">
+                                                            <div class="input-group-prepend">
+                                                                <button id="show_password"
+                                                                    class="btn btn-secondary rounded-right"
+                                                                    type="button" onclick="ShowPassword()"> <span
+                                                                        class="fa fa-eye-slash icon "></span> </button>
+                                                            </div>
+                                                            <div class="invalid-feedback">
+                                                                La contraseña debe de tener mínimo 8 caracteres.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 form-group">
+                                                        <div class="input-group">
+                                                            <input type="password" class="form-control"
+                                                                id="passwordConfirm" name="passwordConfirm"
+                                                                placeholder="Confirme su contraseña"
+                                                                onchange="validatePassword()">
+                                                            <div class="input-group-prepend">
+                                                                <button id="show_passwordc"
+                                                                    class="btn btn-secondary rounded-right"
+                                                                    type="button" onclick="ShowPasswordConfirm()"> <span
+                                                                        class="fa fa-eye-slash icon2 "></span> </button>
+                                                            </div>
+                                                            <div class="invalid-feedback">
+                                                                La contaseña y la confirmación de la contraseña no
+                                                                coinciden.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div
+                                                        class="custom-control custom-checkbox small justify-content-center d-flex">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck">
+                                                        <label id="check" class="custom-control-label"
+                                                            for="customCheck">Aceptar terminos y condiciones</label>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="col-12 mb-3">
+                                                <button type="submit" id="saveButton"
+                                                    class="btn btn-primary btn-block">Registrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="../../js/sweetalert2.all.min.js"></script>
+
+    <script src="../../js/loginValidation.js"></script>
+
+</body>
+
+</html>
